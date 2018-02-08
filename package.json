@@ -1,0 +1,19 @@
+{
+  "name": "beback",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./dist/index.js",
+  "scripts": {
+    "start": "node ./dist/index.js",
+    "build": "./node_modules/typescript/bin/tsc -p ./",
+    "debug": "nodemon --watch ./dist --inspect=0.0.0.0:5858 --nolazy ./dist/index.js",
+    "test": "./node_modules/.bin/mocha --timeout 15000 --compilers ts:ts-node/register ./test/**/*.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^9.4.0",
+    "nodemon": "^1.14.12",
+    "typescript": "^2.7.1"
+  }
+}

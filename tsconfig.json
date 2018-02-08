@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "sourceMap": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "types": ["node"],
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "lib": [
+      "dom",
+      "es5",
+      "esnext.asynciterable"
+    ],
+    "outDir": "./dist"
+  },
+  "files": [
+    "./src/index.ts"
+  ],
+  "include": ["src/*"],
+  "exclude": [
+    "node_modules/*",
+    "dist/*",
+    "tests/*"
+  ]
+}
