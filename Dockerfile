@@ -7,11 +7,4 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 # Copy package.json to the root of the app
-COPY package.json .
-
-# Install all the packages
-RUN npm install --quiet
-
-COPY . .
-
-RUN npm run build
+COPY ./ /usr/src/app

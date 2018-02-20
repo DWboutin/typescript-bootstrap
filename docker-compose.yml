@@ -2,12 +2,28 @@ version: "3"
 services:
   api:
     build: .
-    command: npm start
     volumes:
       - .:/usr/src/app
-      - /usr/src/app/node_modules
-      - /usr/src/app/dist
     ports:
       - "3000:3000"
+      - "9229:9229"
     environment:
       PORT: 3000
+    command: npm start
+
+  debug:
+    build: .
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "3000:3000"
+      - "9229:9229"
+    environment:
+      PORT: 3000
+    command: npm run debug
+
+  build-project:
+    build: .
+    volumes:
+      - .:/usr/src/app
+    command: bash -c "npm install && npm run build"

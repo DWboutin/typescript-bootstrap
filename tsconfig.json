@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "module": "commonjs",
     "sourceMap": true,
+    "inlineSources": true,
     "strict": true,
     "noImplicitAny": false,
     "types": ["node"],
@@ -11,7 +12,7 @@
     ],
     "lib": [
       "dom",
-      "es5",
+      "es6",
       "esnext.asynciterable"
     ],
     "outDir": "./dist"
